@@ -1,5 +1,17 @@
-#! /bin/sh
-DIR=$(cd $(dirname $0); pwd)
-cd $DIR
-ln -sf $DIR/_git/gitconfig ~/.gitconfig
-ln -sf $DIR/_bash/bashrc ~/.bashrc
+#!/bin/sh
+if [ $# -eq 1 ]
+then
+	if [ -e $1/install.sh ]; then
+    		cd $1
+	elif [ -e _$1/install.sh ]; then
+	    	cd _$1
+	else
+		echo ERROR:The specified target \"$1\" does not exist.
+		exit
+	fi
+
+	./install.sh
+	exit
+fi
+
+find -maxdepth 1 -type d -name "_*" | xargs -n1 $0
