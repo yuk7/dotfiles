@@ -5,6 +5,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Default Editor
+export EDITOR=nano
+export VISUAL=$EDITOR
+
 # enable color support
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
