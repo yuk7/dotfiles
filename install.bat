@@ -11,6 +11,8 @@ exit /b
 )
 
 if not "%~1"=="" (
+	echo.
+	echo Installation target:%1
 	if exist _%~1\install.bat (
 		cmd /c _%~1\install.bat
 	) else if exist %~1\install.bat (
