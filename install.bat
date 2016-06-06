@@ -5,6 +5,11 @@
 @echo off
 cd /d %~dp0
 
+if not "%~2"=="" (
+	for %%s in (%*) do cmd /c %~dpnx0 %%s
+exit /b
+)
+
 if not "%~1"=="" (
 	if exist _%~1\install.bat (
 		cmd /c _%~1\install.bat
