@@ -1,4 +1,9 @@
 #!/bin/sh
+
+# Copyright (c) 2016 yuk7 <yukx00@gmail.com>
+# Released under the MIT license
+# http://opensource.org/licenses/mit-license.php
+
 if [ $# -eq 1 ]
 then
 	if [ -e $1/install.sh ]; then
