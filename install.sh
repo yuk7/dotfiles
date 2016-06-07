@@ -17,6 +17,8 @@ fi
 
 if [ $# -eq 1 ]
 then
+	echo
+	echo Installation target:$1
 	if [ -e $1/install.sh ]; then
     		cd $1
 	elif [ -e _$1/install.sh ]; then
