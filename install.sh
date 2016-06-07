@@ -4,6 +4,17 @@
 # Released under the MIT license
 # http://opensource.org/licenses/mit-license.php
 
+if [ $# -ge 2 ]
+then
+	for f in `seq 1 ${#}`
+	do
+		$0 ${1}
+		shift
+	done
+	exit
+fi
+
+
 if [ $# -eq 1 ]
 then
 	if [ -e $1/install.sh ]; then
