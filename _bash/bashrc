@@ -20,6 +20,7 @@ alias egrep='egrep --color=auto'
 #aliases
 alias ll='ls -l'
 alias la='ls -A'
+alias lla='ls -la'
 alias l='ls -CF'
 alias c='clear'
 alias e='echo -e'
