@@ -3,6 +3,6 @@
 	email = yukx00@gmail.com
 [core]
 	editor = nano
-    safecrlf = true
+	safecrlf = true
 	autoCRLF = false
 
