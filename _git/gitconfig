@@ -15,6 +15,7 @@
 	cmm = commit -m
 	cam = commit --amend
 	camm = commit --amend -m
+	mg = merge
 	br = branch
 	cl = clone
 	co = checkout
