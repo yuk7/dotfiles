@@ -6,3 +6,21 @@
 	safecrlf = true
 	autoCRLF = false
 
+
+[alias]
+	a = add
+	us = reset HEAD
+	cm = commit
+	cma = commit -a
+	cmm = commit -m
+	cam = commit --amend
+	camm = commit --amend -m
+	br = branch
+	cl = clone
+	co = checkout
+	ft = fetch
+	df = diff
+	st = status
+	sh = show
+	rso = remote show origin
+	wc = whatchanged
