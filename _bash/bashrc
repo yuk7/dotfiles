@@ -10,7 +10,7 @@ export EDITOR=nano
 export VISUAL=$EDITOR
 
 # Enable color support
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --show-control-chars'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
