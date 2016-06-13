@@ -27,5 +27,7 @@
 	sh = show
 	rso = remote show origin
 	wc = whatchanged
-	graph = log --graph --oneline --decorate=full
-	gp = log --graph --oneline --decorate=full
+	graph = log --graph --date=short --format=\"%C(yellow)%h%C(reset)  %C(magenta)%cd %C(auto)%d%C(reset) %C(white)%s %C(cyan)@%an%C(reset)\"
+	gp = log --graph --date=short --format=\"%C(yellow)%h%C(reset) %C(magenta)%cd %C(auto)%d%C(reset) %C(white)%s  %C(cyan)@%an%C(reset)\"
+	gpa = log --graph --date=short --format=\"%C(yellow)%h%C(reset) %C(magenta)%cd %C(auto)%d%C(reset) %C(white)%s  %C(cyan)@%an%C(reset)\"
+	gpr = log --graph --date=short --format=\"%C(yellow)%h%C(reset) %C(auto)%d%C(reset) %C(white)%s  %C(cyan)@%an %C(magenta)(%cr)%C(reset)\"
