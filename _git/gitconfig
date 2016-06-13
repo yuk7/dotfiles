@@ -11,7 +11,7 @@
 
 [alias]
 	a = add
-	us = reset HEAD
+	rh = reset HEAD
 	cm = commit
 	cma = commit -a
 	cmm = commit -m
