@@ -1,4 +1,4 @@
-﻿#! /bin/sh
+#! /bin/sh
 
 # Copyright (c) 2016 yuk7 <yukx00@gmail.com>
 # Released under the MIT license
