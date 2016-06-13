@@ -27,3 +27,5 @@
 	sh = show
 	rso = remote show origin
 	wc = whatchanged
+	graph = log --graph --oneline --decorate=full
+	gp = log --graph --oneline --decorate=full
