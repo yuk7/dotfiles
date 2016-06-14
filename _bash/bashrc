@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# don't put duplicate lines in the history
+HISTCONTROL=ignoredups:ignorespace
+
 # Terminal color support
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	color_prompt=yes
