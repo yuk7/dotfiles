@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# don't put duplicate lines in the history
+# Don't put duplicate lines in the history
 HISTCONTROL=ignoredups:ignorespace
 
 # Terminal color support
@@ -39,6 +39,14 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ~='cd ~'
+alias -- -='cd -'
 
 #aliases
 alias ll='ls -l'
