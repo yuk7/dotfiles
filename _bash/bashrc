@@ -5,6 +5,26 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Terminal color support
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+	color_prompt=yes
+fi
+
+case "$TERM" in
+	screen-256color) color_prompt=yes;;
+	xterm-color) color_prompt=yes;;
+	xterm-256color) color_prompt=yes;;
+esac
+
+if [ "$color_prompt" = yes ]; then
+	PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+	PS1='\u@\h:\w\$ '
+fi
+
+
+
+
 # Default Editor
 export EDITOR=nano
 export VISUAL=$EDITOR
@@ -29,19 +49,3 @@ alias k='kill'
 
 alias myip='wget http://ipinfo.io/ip -qO -'
 
-
-if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	color_prompt=yes
-fi
-
-case "$TERM" in
-	screen-256color) color_prompt=yes;;
-	xterm-color) color_prompt=yes;;
-	xterm-256color) color_prompt=yes;;
-esac
-
-if [ "$color_prompt" = yes ]; then
-	PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-	PS1='\u@\h:\w\$ '
-fi
