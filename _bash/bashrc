@@ -50,5 +50,11 @@ alias e='echo -e'
 alias x='exit'
 alias k='kill'
 
+function mkcd() {
+	mkdir $1;
+	cd $1;
+}
+alias mkcd=mkcd
+
 alias myip='wget http://ipinfo.io/ip -qO -'
 
