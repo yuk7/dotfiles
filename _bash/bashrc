@@ -30,7 +30,12 @@ alias k='kill'
 alias myip='wget http://ipinfo.io/ip -qO -'
 
 
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+	color_prompt=yes
+fi
+
 case "$TERM" in
+	screen-256color) color_prompt=yes;;
 	xterm-color) color_prompt=yes;;
 	xterm-256color) color_prompt=yes;;
 esac
