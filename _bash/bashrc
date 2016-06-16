@@ -29,7 +29,10 @@ fi
 
 
 # Default Editor
-export EDITOR=nano
+if type nano 2>/dev/null 1>/dev/null 
+then
+	export EDITOR=nano
+fi
 export VISUAL=$EDITOR
 
 # Enable color support
