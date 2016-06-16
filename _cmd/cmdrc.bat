@@ -19,6 +19,7 @@ doskey ...=cd ../..
 doskey ....=cd ../../..
 doskey .....=cd ../../../..
 doskey ~=cd /d %USERPROFILE%
-
+doskey /=cd \
+doskey \=cd \
 
 @echo on
