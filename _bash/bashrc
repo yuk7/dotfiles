@@ -29,9 +29,19 @@ fi
 
 
 # Default Editor
+if type vi 2>/dev/null 1>/dev/null 
+then
+	export EDITOR=vi
+fi
+
 if type nano 2>/dev/null 1>/dev/null 
 then
 	export EDITOR=nano
+fi
+
+if type vim 2>/dev/null 1>/dev/null 
+then
+	export EDITOR=vim
 fi
 export VISUAL=$EDITOR
 
