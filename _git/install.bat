@@ -4,15 +4,13 @@
 
 @echo off
 cd /d %~dp0
-if exist %USERPROFILE%\.gitconfig.bak del /F /Q %USERPROFILE%\.gitconfig.bak
-if exist %USERPROFILE%\.gitconfig move /Y %USERPROFILE%\.gitconfig %USERPROFILE%\.gitconfig.bak
-
+del /F /Q %USERPROFILE%\.gitconfig.bak >NUL 2>&1
+move /Y %USERPROFILE%\.gitconfig %USERPROFILE%\.gitconfig.bak >NUL 2>&1
 
 mklink /h %USERPROFILE%\.gitconfig .\gitconfig
-
 
 if exist %USERPROFILE%\.gitconfig exit /b
 if not exist %USERPROFILE%\.gitconfig (
 echo ERROR:Installation failed.
-if exist %USERPROFILE%\.gitconfig.bak move /Y %USERPROFILE%\.gitconfig.bak %USERPROFILE%\.gitconfig
+move /Y %USERPROFILE%\.gitconfig.bak %USERPROFILE%\.gitconfig >NUL 2>&1
 )

@@ -4,13 +4,13 @@
 
 @echo off
 cd /d %~dp0
-if exist %USERPROFILE%\.bashrc.bak del /F /Q %USERPROFILE%\.bashrc.bak
-if exist %USERPROFILE%\.bashrc move /Y %USERPROFILE%\.bashrc %USERPROFILE%\.bashrc.bak
+del /F /Q %USERPROFILE%\.bashrc.bak >NUL 2>&1
+move /Y %USERPROFILE%\.bashrc %USERPROFILE%\.bashrc.bak >NUL 2>&1
 
 mklink /h %USERPROFILE%\.bashrc .\bashrc
 
 if exist %USERPROFILE%\.bashrc exit /b
 if not exist %USERPROFILE%\.bashrc (
 echo ERROR:Installation failed.
-if exist %USERPROFILE%\.bashrc.bak move /Y %USERPROFILE%\.bashrc.bak %USERPROFILE%\.bashrc
+move /Y %USERPROFILE%\.bashrc.bak %USERPROFILE%\.bashrc >NUL 2>&1
 )
