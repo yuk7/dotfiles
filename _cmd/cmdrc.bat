@@ -11,5 +11,11 @@ doskey k=taskkill
 
 ::Additional macros
 
+:: Navigation
+doskey ..=cd ..
+doskey ...=cd ../..
+doskey ....=cd ../../..
+doskey .....=cd ../../../..
+doskey ~=cd %USERPROFILE%
 
 @echo on
