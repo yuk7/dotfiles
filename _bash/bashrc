@@ -42,6 +42,7 @@ fi
 if type vim 2>/dev/null 1>/dev/null 
 then
 	export EDITOR=vim
+	alias vi='vim'
 fi
 export VISUAL=$EDITOR
 
