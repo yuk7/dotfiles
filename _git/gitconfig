@@ -7,7 +7,7 @@
 	autoCRLF = false
 
 [push]
-   default = current
+	default = current
 
 [alias]
 	a = add
