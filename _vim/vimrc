@@ -6,3 +6,4 @@ map OC <Right>
 map OD <Left>
 
 syntax enable
+set cindent
