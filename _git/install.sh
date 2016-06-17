@@ -6,4 +6,14 @@
 
 DIR=$(cd $(dirname $0); pwd)
 cd $DIR
+
+mv -f ~/.gitconfig ~/.gitconfig.bak >/dev/null 2>&1
+
 ln -sf $DIR/gitconfig ~/.gitconfig
+
+
+if [ ! -e ~/.gitconfig ]
+then
+	echo ERROR:Installation failed.
+	mv -f ~/.gitconfig.bak ~/.gitconfig >/dev/null 2>&1
+fi

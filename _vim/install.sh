@@ -6,4 +6,13 @@
 
 DIR=$(cd $(dirname $0); pwd)
 cd $DIR
+
+mv -f ~/.vimrc ~/.vimrc.bak >/dev/null 2>&1
+
 ln -sf $DIR/vimrc ~/.vimrc
+
+if [ ! -e ~/.vimrc ]
+then
+	echo ERROR:installation failed.
+	mv -f ~/.vimrc.bak ~/.vimrc >/dev/null 2>&1
+fi
