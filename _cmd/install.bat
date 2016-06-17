@@ -4,7 +4,6 @@
 
 @echo off
 cd /d %~dp0
-del /F /Q %USERPROFILE%\cmdrc.bak >NUL 2>&1
 move /Y %USERPROFILE%\cmdrc.bat %USERPROFILE%\cmdrc.bak >NUL 2>&1
 
 mklink /h %USERPROFILE%\cmdrc.bat .\cmdrc.bat

@@ -4,7 +4,6 @@
 
 @echo off
 cd /d %~dp0
-del /F /Q %USERPROFILE%\.gitconfig.bak >NUL 2>&1
 move /Y %USERPROFILE%\.gitconfig %USERPROFILE%\.gitconfig.bak >NUL 2>&1
 
 mklink /h %USERPROFILE%\.gitconfig .\gitconfig
