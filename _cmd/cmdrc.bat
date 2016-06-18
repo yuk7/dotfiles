@@ -5,8 +5,17 @@ doskey c=cls
 doskey e=echo.
 doskey x=exit
 doskey k=taskkill
-doskey cd=cd /d $*
-doskey chdir=chdir /d $*
+
+doskey cd=if "$*"=="" (^
+@cd ^
+) else if "$1"=="/d" (^
+@cd $*^
+) else if "$1"=="/D" (^
+@cd $*^
+) else (^
+@cd /d $*^
+)
+
 
 ::macros for Linux-like commands.(include GNU tools,etc...)
 
