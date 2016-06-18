@@ -9,11 +9,11 @@ doskey k=taskkill
 doskey cd=if "$*"=="" (^
 @cd ^
 ) else if "$1"=="/d" (^
-@cd $*^
+@cd "$*"^
 ) else if "$1"=="/D" (^
-@cd $*^
+@cd "$*"^
 ) else (^
-@cd /d $*^
+@cd /d "$*"^
 )
 
 
