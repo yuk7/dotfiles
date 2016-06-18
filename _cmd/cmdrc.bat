@@ -21,6 +21,16 @@ doskey cd=if "$*"=="" (^
 
 
 ::Additional macros
+doskey ex=if exist "%%CD%%$*\" (^
+Explorer /root, "%%CD%%$*\"^
+) else if exist "%%CD%%\$*\" (^
+Explorer /root, "%%CD%%\$*\"^
+) else if exist "$*\" (^
+Explorer /root, "$*"^
+) else (^
+Explorer /select, "$*"^
+)
+
 
 :: Navigation
 doskey ..=cd ..
