@@ -2,9 +2,9 @@
 
 ::macros for normal windows commands
 doskey c=cls
-doskey e=echo.
+doskey e=echo. $*
 doskey x=exit
-doskey k=taskkill
+doskey k=taskkill $*
 
 doskey cd=if "$*"=="" (^
 @cd ^
