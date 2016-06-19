@@ -45,6 +45,7 @@ then
 	alias vi='vim'
 fi
 export VISUAL=$EDITOR
+alias v=$EDITOR
 
 # Enable color support
 alias ls='ls --color=auto --show-control-chars'
