@@ -1,10 +1,16 @@
 set nocompatible
 set nobackup
 
-map OA <Up>
-map OB <Down>
-map OC <Right>
-map OD <Left>
+map <esc>OA <Up>
+map <esc>OB <Down>
+map <esc>OC <Right>
+map <esc>OD <Left>
+map! <esc>OA <Up>
+map! <esc>OB <Down>
+map! <esc>OC <Right>
+map! <esc>OD <Left>
+
+
 set backspace=start,eol,indent
 
 set encoding=utf-8
