@@ -15,6 +15,7 @@ set backspace=start,eol,indent
 
 set encoding=utf-8
 filetype plugin indent on
+set clipboard=unnamed,autoselect
 syntax enable
 set cindent
 set ruler
