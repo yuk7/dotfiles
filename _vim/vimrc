@@ -37,4 +37,4 @@ set hlsearch
 set showmatch
 
 
-set visualbell
+set visualbell t_vb=
