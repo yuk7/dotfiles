@@ -27,6 +27,8 @@ set showcmd
 
 set list
 set listchars=tab:>_,trail:_
+highlight IGSpace ctermbg=Red guibg=Red
+match IGSpace /　/
 
 set smartcase
 set hlsearch
