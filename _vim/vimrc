@@ -18,5 +18,6 @@ filetype plugin indent on
 set clipboard=unnamed,autoselect
 syntax enable
 set cindent
+set autoindent
 set ruler
 set number
