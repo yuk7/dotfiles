@@ -17,6 +17,7 @@ map! <esc>OD <Left>
 set backspace=start,eol,indent
 
 set clipboard=unnamed,autoselect
+set clipboard=unnamedplus
 syntax enable
 set cindent
 set autoindent
