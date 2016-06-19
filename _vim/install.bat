@@ -9,7 +9,6 @@ move /Y %USERPROFILE%\.vimrc %USERPROFILE%\.vimrc.bak >NUL 2>&1
 
 mklink /h %USERPROFILE%\.vimrc .\vimrc
 
-if exist %USERPROFILE%\.vimrc exit /b
 if not exist %USERPROFILE%\.vimrc (
 echo ERROR:Installation failed.
 move /Y %USERPROFILE%\.vimrc.bak %USERPROFILE%\.vimrc >NUL 2>&1

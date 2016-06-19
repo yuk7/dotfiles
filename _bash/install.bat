@@ -9,7 +9,6 @@ move /Y %USERPROFILE%\.bashrc %USERPROFILE%\.bashrc.bak >NUL 2>&1
 
 mklink /h %USERPROFILE%\.bashrc .\bashrc
 
-if exist %USERPROFILE%\.bashrc exit /b
 if not exist %USERPROFILE%\.bashrc (
 echo ERROR:Installation failed.
 move /Y %USERPROFILE%\.bashrc.bak %USERPROFILE%\.bashrc >NUL 2>&1

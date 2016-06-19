@@ -10,7 +10,6 @@ move /Y %USERPROFILE%\cmdrc.bat %USERPROFILE%\cmdrc.bak >NUL 2>&1
 mklink /h %USERPROFILE%\cmdrc.bat .\cmdrc.bat
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Command Processor" /v AutoRun /d %USERPROFILE%\cmdrc.bat /f
 
-if exist %USERPROFILE%\cmdrc.bat exit /b
 if not exist %USERPROFILE%\cmdrc.bat (
 echo ERROR:Installation failed.
 move /Y %USERPROFILE%\cmdrc.bak %USERPROFILE%\cmdrc.bat >NUL 2>&1

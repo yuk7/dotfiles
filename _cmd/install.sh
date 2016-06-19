@@ -5,7 +5,8 @@
 # http://opensource.org/licenses/mit-license.php
 
 
+#SKIP
 #Do nothing for this target
 #This is for Windows only.
-echo Do nothing for this target
-echo This is for Windows only.
+echo "  SKIP:Do nothing for this target"
+echo "  This is for Windows only."

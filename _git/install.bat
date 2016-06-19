@@ -9,7 +9,6 @@ move /Y %USERPROFILE%\.gitconfig %USERPROFILE%\.gitconfig.bak >NUL 2>&1
 
 mklink /h %USERPROFILE%\.gitconfig .\gitconfig
 
-if exist %USERPROFILE%\.gitconfig exit /b
 if not exist %USERPROFILE%\.gitconfig (
 echo ERROR:Installation failed.
 move /Y %USERPROFILE%\.gitconfig.bak %USERPROFILE%\.gitconfig >NUL 2>&1
