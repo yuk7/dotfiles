@@ -25,6 +25,9 @@ set ruler
 set number
 set showcmd
 
+set list
+set listchars=tab:>_,trail:_
+
 set smartcase
 set hlsearch
 set showmatch
