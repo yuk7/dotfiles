@@ -6,5 +6,7 @@ map OC <Right>
 map OD <Left>
 set backspace=start,eol,indent
 
+set encoding=utf-8
 syntax enable
 set cindent
+
