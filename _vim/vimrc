@@ -1,6 +1,9 @@
 set nocompatible
 set nobackup
 
+set encoding=utf-8
+scriptencoding utf-8
+
 map <esc>OA <Up>
 map <esc>OB <Down>
 map <esc>OC <Right>
@@ -13,8 +16,6 @@ map! <esc>OD <Left>
 
 set backspace=start,eol,indent
 
-set encoding=utf-8
-filetype plugin indent on
 set clipboard=unnamed,autoselect
 syntax enable
 set cindent
