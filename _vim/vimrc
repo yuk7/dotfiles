@@ -22,3 +22,7 @@ set autoindent
 set smartindent
 set ruler
 set number
+
+set smartcase
+set hlsearch
+set showmatch
