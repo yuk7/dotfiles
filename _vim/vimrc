@@ -27,3 +27,6 @@ set showcmd
 set smartcase
 set hlsearch
 set showmatch
+
+
+set visualbell
