@@ -4,6 +4,7 @@
 
 @echo off
 cd /d %~dp0
+del /F /Q %USERPROFILE%\.bashrc.bak >NUL 2>&1
 move /Y %USERPROFILE%\.bashrc %USERPROFILE%\.bashrc.bak >NUL 2>&1
 
 mklink /h %USERPROFILE%\.bashrc .\bashrc

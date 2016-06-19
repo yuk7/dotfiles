@@ -4,6 +4,7 @@
 
 @echo off
 cd /d %~dp0
+del /F /Q /S %USERPROFILE%\.vimrc.bak >NUL 2>&1
 move /Y %USERPROFILE%\.vimrc %USERPROFILE%\.vimrc.bak >NUL 2>&1
 
 mklink /h %USERPROFILE%\.vimrc .\vimrc
