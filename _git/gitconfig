@@ -11,6 +11,8 @@
 
 [alias]
 	a = add
+	aa = add -A
+	ac = add .
 	rh = reset HEAD
 	cm = commit
 	cma = commit -a
