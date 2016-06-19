@@ -10,4 +10,5 @@ set encoding=utf-8
 filetype plugin indent on
 syntax enable
 set cindent
-
+set ruler
+set number
