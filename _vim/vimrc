@@ -19,5 +19,6 @@ set clipboard=unnamed,autoselect
 syntax enable
 set cindent
 set autoindent
+set smartindent
 set ruler
 set number
