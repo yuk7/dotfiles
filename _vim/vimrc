@@ -24,6 +24,7 @@ set cindent
 set autoindent
 set smartindent
 set cursorline
+highlight CursorLine term=bold cterm=bold
 set ruler
 set number
 set showcmd
