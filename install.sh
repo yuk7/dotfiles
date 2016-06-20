@@ -4,6 +4,10 @@
 # Released under the MIT license
 # http://opensource.org/licenses/mit-license.php
 
+
+DIR=$(cd $(dirname $0); pwd)
+cd $(dirname $0)
+
 if [ $# -ge 2 ]
 then
 	for f in `seq 1 ${#}`
@@ -32,4 +36,4 @@ then
 	exit
 fi
 
-find -maxdepth 1 -type d -name "_*" | xargs -n1 $0
+find -maxdepth 1 -type d -name "_*" | xargs -n1 $DIR/$(basename $0)
