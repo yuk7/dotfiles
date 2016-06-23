@@ -12,7 +12,7 @@ if [ $# -ge 2 ]
 then
 	for f in `seq 1 ${#}`
 	do
-		$0 ${1}
+		$DIR/$(basename $0) ${1}
 		shift
 	done
 	exit
