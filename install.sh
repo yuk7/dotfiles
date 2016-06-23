@@ -24,9 +24,9 @@ then
 	echo
 	echo Installation target:$1
 	if [ -e $1/install.sh ]; then
-    		cd $1
+		cd $1
 	elif [ -e _$1/install.sh ]; then
-	    	cd _$1
+		cd _$1
 	else
 		echo ERROR:The specified target \"$1\" does not exist.
 		exit
