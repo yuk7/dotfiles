@@ -5,7 +5,6 @@
 # http://opensource.org/licenses/mit-license.php
 
 DIR=$(cd $(dirname $0); pwd)
-cd $DIR
 
 mv -f ~/.tmux.conf ~/.tmux.conf.bak >/dev/null 2>&1
 
