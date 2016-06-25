@@ -61,7 +61,6 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ~='cd ~'
-alias -- -='cd -'
 
 #aliases
 alias ll='ls -l'
