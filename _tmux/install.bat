@@ -3,11 +3,10 @@
 :: http://opensource.org/licenses/mit-license.php
 
 @echo off
-cd /d %~dp0
 del /F /Q %USERPROFILE%\.tmux.conf.bak >NUL 2>&1
 move /Y %USERPROFILE%\.tmux.conf %USERPROFILE%\.tmux.conf.bak >NUL 2>&1
 
-mklink /h %USERPROFILE%\.tmux.conf .\tmux.conf
+mklink /h %USERPROFILE%\.tmux.conf %~dp0\tmux.conf
 
 if not exist %USERPROFILE%\.tmux.conf (
 echo ERROR:Installation failed.

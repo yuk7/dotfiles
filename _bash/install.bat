@@ -3,11 +3,10 @@
 :: http://opensource.org/licenses/mit-license.php
 
 @echo off
-cd /d %~dp0
 del /F /Q %USERPROFILE%\.bashrc.bak >NUL 2>&1
 move /Y %USERPROFILE%\.bashrc %USERPROFILE%\.bashrc.bak >NUL 2>&1
 
-mklink /h %USERPROFILE%\.bashrc .\bashrc
+mklink /h %USERPROFILE%\.bashrc %~dp0\bashrc
 
 if not exist %USERPROFILE%\.bashrc (
 echo ERROR:Installation failed.

@@ -3,11 +3,10 @@
 :: http://opensource.org/licenses/mit-license.php
 
 @echo off
-cd /d %~dp0
 del /F /Q %USERPROFILE%\cmdrc.bak >NUL 2>&1
 move /Y %USERPROFILE%\cmdrc.bat %USERPROFILE%\cmdrc.bak >NUL 2>&1
 
-mklink /h %USERPROFILE%\cmdrc.bat .\cmdrc.bat
+mklink /h %USERPROFILE%\cmdrc.bat %~dp0\cmdrc.bat
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Command Processor" /v AutoRun /d %USERPROFILE%\cmdrc.bat /f
 
 if not exist %USERPROFILE%\cmdrc.bat (

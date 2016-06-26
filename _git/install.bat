@@ -3,11 +3,10 @@
 :: http://opensource.org/licenses/mit-license.php
 
 @echo off
-cd /d %~dp0
 del /F /Q %USERPROFILE%\.gitconfig.bak >NUL 2>&1
 move /Y %USERPROFILE%\.gitconfig %USERPROFILE%\.gitconfig.bak >NUL 2>&1
 
-mklink /h %USERPROFILE%\.gitconfig .\gitconfig
+mklink /h %USERPROFILE%\.gitconfig %~dp0\gitconfig
 
 if not exist %USERPROFILE%\.gitconfig (
 echo ERROR:Installation failed.
