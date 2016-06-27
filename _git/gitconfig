@@ -19,6 +19,7 @@
 	cmm = commit -m
 	cam = commit --amend
 	camm = commit --amend -m
+	pl = pull
 	mg = merge
 	br = branch
 	cl = clone
