@@ -1,7 +1,7 @@
 ﻿set nocompatible
 set nobackup
 
-set fileencodings=utf-8,cp932,euc-jp,iso-2022jp
+set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932
 set encoding=utf-8
 scriptencoding utf-8
 
