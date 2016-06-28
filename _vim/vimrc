@@ -1,4 +1,4 @@
-﻿set nocompatible
+set nocompatible
 set nobackup
 
 set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932
