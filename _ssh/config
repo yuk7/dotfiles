@@ -1,2 +1,4 @@
 Host *
     Compression yes
+    ServerAliveInterval 60
+    TCPKeepAlive yes
