@@ -26,6 +26,11 @@ else
 fi
 
 
+# Set locale on MSYS2
+if type /msys2.exe 2>/dev/null 1>/dev/null 
+then
+	export LANG=en_US.UTF-8
+fi
 
 
 # Default Editor
