@@ -2,3 +2,5 @@ BoldAsFont=-1
 Font=Consolas
 FontHeight=10
 Transparency=high
+Columns=120
+Rows=35
