@@ -3,5 +3,5 @@
 :: http://opensource.org/licenses/mit-license.php
 
 @echo off
-echo "  SKIP:Do nothing for this target"
-echo "  This is for UNIX only."
+echo   SKIP:Do nothing for this target
+echo   This is for UNIX only.
