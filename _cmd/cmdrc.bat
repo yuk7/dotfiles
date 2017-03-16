@@ -21,7 +21,7 @@ doskey cd=if "$*"=="" (^
 
 
 ::Additional macros
-doskey ex=if exist "%%CD%%$*\" (^
+doskey fe=if exist "%%CD%%$*\" (^
 Explorer /root, "%%CD%%$*\"^
 ) else if exist "%%CD%%\$*\" (^
 Explorer /root, "%%CD%%\$*\"^
