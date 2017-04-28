@@ -8,6 +8,14 @@
 DIR=$(cd $(dirname $0); pwd)
 cd $(dirname $0)
 
+find -maxdepth 0 &>/dev/null
+if [ $? != 0 ]
+then
+	echo find is not GNU find
+	echo unsupported. exit.
+	exit
+fi
+
 if [ $# -ge 2 ]
 then
 	for f in `seq 1 ${#}`
