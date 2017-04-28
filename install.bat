@@ -5,6 +5,14 @@
 @echo off
 cd /d %~dp0
 
+find /? >NUL 2>&1
+if not "%ERRORLEVEL%"=="0" (
+	echo find is not Windows find.
+	echo unsupported. exit.
+	exit/b
+)
+
+
 if not "%~2"=="" (
 	for %%s in (%*) do cmd /c %~dpnx0 %%s
 exit /b
