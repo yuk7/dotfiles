@@ -8,6 +8,7 @@ DIR=$(cd $(dirname $0); pwd)
 
 mv -f ~/.ssh/config ~/.ssh/config.bak >/dev/null 2>&1
 
+chmod 644 $DIR/config
 mkdir ~/.ssh  >/dev/null 2>&1
 ln -sf $DIR/config ~/.ssh/config
 
