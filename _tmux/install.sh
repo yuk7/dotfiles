@@ -8,12 +8,15 @@ DIR=$(cd $(dirname $0); pwd)
 
 mv -f ~/.tmux.conf ~/.tmux.conf.bak >/dev/null 2>&1
 mv -f ~/.tmux.2.0.conf ~/.tmux.2.0.conf.bak >/dev/null 2>&1
+mv -f ~/.tmux.2.4.conf ~/.tmux.2.4.conf.bak >/dev/null 2>&1
 
 ln -sf $DIR/tmux.conf ~/.tmux.conf
 ln -sf $DIR/tmux.2.0.conf ~/.tmux.2.0.conf
-if [ ! -e ~/.tmux.conf -o ! -e ~/.tmux.2.0.conf ]
+ln -sf $DIR/tmux.2.4.conf ~/.tmux.2.4.conf
+if [ ! -e ~/.tmux.conf -o ! -e ~/.tmux.2.0.conf -o ! -e ~/.tmux.2.4.conf ]
 then
 	echo ERROR:installation failed.
 	mv -f ~/.tmux.conf.bak ~/.tmux.conf >/dev/null 2>&1
 	mv -f ~/.tmux.2.0.conf.bak ~/.tmux.2.0.conf >/dev/null 2>&1
+	mv -f ~/.tmux.2.4.conf.bak ~/.tmux.2.4.conf >/dev/null 2>&1
 fi
