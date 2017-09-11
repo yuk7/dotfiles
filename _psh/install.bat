@@ -4,3 +4,4 @@
 
 @echo off
 
+powershell -File %~dp0\install.ps1
