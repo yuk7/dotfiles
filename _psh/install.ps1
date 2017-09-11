@@ -5,6 +5,7 @@
 $cpath=Split-Path $MyInvocation.MyCommand.Path
 $dpath=[Environment]::GetFolderPath("MyDocuments")+"\WindowsPowerShell"
 
+New-Item $dpath -ItemType Directory 2>$null
 Remove-Item $dpath"\Microsoft.PowerShell_profile.ps1.bak" 2>$null
 Move-Item $dpath"\Microsoft.PowerShell_profile.ps1" $dpath"\Microsoft.PowerShell_profile.ps1.bak" 2>$null
 
