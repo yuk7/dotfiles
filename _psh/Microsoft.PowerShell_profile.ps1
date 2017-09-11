@@ -1,3 +1,6 @@
+#color
+$Host.PrivateData.ErrorBackgroundColor = [console]::BackgroundColor 
+
 #command aliases
 function x{exit}
 function c{cls}
