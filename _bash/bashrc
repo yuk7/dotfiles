@@ -25,6 +25,11 @@ else
 	PS1='\u@\h $ENVNAME:\w\$ '
 fi
 
+#Set DISPLAY=:0 when DISPLAY isn't set
+if [ -z "$DISPLAY" ]; then
+	export DISPLAY=:0
+fi
+
 
 # Set locale on MSYS2
 if type /msys2.exe 2>/dev/null 1>/dev/null 
