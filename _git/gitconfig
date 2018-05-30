@@ -9,6 +9,12 @@
 [push]
 	default = current
 
+[sendemail]
+	smtpencryption = tls
+	smtpserver = smtp.gmail.com
+	smtpuser = yukx00@gmail.com
+	smtpserverport = 587
+
 [alias]
 	a = add
 	aa = add -A
