@@ -5,7 +5,7 @@
 @echo off
 set DESTDIR=%APPDATA%\Code\User
 
-del /F /Q /S %DESTDIR%\settings.json >NUL 2>&1
+del /F /Q /S %DESTDIR%\settings.json.bak >NUL 2>&1
 move /Y %DESTDIR%\settings.json %DESTDIR%\settings.json.bak >NUL 2>&1
 
 mkdir %DESTDIR% >NUL 2>&1
