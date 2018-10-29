@@ -1,5 +1,6 @@
 {
     "extensions.ignoreRecommendations": true,
-    "window.zoomLevel": -1,
-    "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -Dfile.encoding=UTF-8"
+    "window.zoomLevel": 0,
+    "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -Dfile.encoding=UTF-8",
+    "java.errors.incompleteClasspath.severity": "ignore",
 }
