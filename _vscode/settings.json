@@ -3,4 +3,10 @@
     "window.zoomLevel": -1,
     "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -Dfile.encoding=UTF-8",
     "java.errors.incompleteClasspath.severity": "ignore",
+    "discord.detailsDebugging": "Debugging",
+    "discord.detailsEditing": "Editing",
+    "discord.lowerDetailsDebugging": "{null}",
+    "discord.lowerDetailsEditing": "{null}",
+    "discord.lowerDetailsNotFound": "{null}",
+    "discord.lowerDetailsIdle": "{null}",
 }
