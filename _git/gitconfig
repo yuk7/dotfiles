@@ -5,6 +5,7 @@
 	editor = nano
 	safecrlf = true
 	autoCRLF = false
+	quotepath = false
 
 [push]
 	default = current
