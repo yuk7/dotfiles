@@ -97,3 +97,9 @@ alias mkcd=mkcd
 
 alias myip='wget http://ipinfo.io/ip -qO -'
 
+# Import from .bashrc.local
+if [ -e "${HOME}/.bashrc.local" ]
+then
+	source "${HOME}/.bashrc.local"
+fi
+
