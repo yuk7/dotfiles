@@ -6,8 +6,8 @@ $cpath=Split-Path $MyInvocation.MyCommand.Path
 $dpath=[Environment]::GetFolderPath("MyDocuments")+"\WindowsPowerShell"
 
 New-Item $dpath -ItemType Directory 2>$null
-Remove-Item $dpath"\Microsoft.PowerShell_profile.ps1.bak" 2>$null
-Move-Item $dpath"\Microsoft.PowerShell_profile.ps1" $dpath"\Microsoft.PowerShell_profile.ps1.bak" 2>$null
+Remove-Item $dpath"\profile.ps1.bak" 2>$null
+Move-Item $dpath"\profile.ps1" $dpath"\profile.ps1.bak" 2>$null
 
-New-Item -ItemType HardLink -Path $dpath -Name Microsoft.PowerShell_profile.ps1 -Value $cpath\Microsoft.PowerShell_profile.ps1 >$null
+New-Item -ItemType HardLink -Path $dpath -Name profile.ps1 -Value $cpath\profile.ps1 >$null
 
