@@ -25,7 +25,7 @@ $ ./install.sh {targets}
 ## Target Lists
 * bash
 * cmd
-* psh  (PowerShell)
+* pwsh  (PowerShell)
 * mintty
 * tmux
 * git
