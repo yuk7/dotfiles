@@ -58,12 +58,17 @@ export VISUAL=$EDITOR
 alias v=$EDITOR
 
 # Enable color support
-alias ls='ls --color=auto --show-control-chars'
+alias dir='dir --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+# if ls supports --show-control-chars,use it.
+if ls --show-control-chars 2>/dev/null 1>/dev/null 
+then
+	alias ls='ls --color=auto --show-control-chars'
+fi
 
 # Navigation
 alias ..='cd ..'
