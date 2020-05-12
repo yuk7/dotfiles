@@ -6,6 +6,7 @@
 	safecrlf = true
 	autoCRLF = input
 	quotepath = false
+	attributesfile = ~/.gitattributes
 
 [push]
 	default = current
