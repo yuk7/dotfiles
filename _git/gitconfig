@@ -4,7 +4,7 @@
 [core]
 	editor = nano
 	safecrlf = true
-	autoCRLF = false
+	autoCRLF = input
 	quotepath = false
 
 [push]
