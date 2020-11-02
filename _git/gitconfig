@@ -8,6 +8,10 @@
 	quotepath = false
 	attributesfile = ~/.gitattributes
 
+[init]
+	defaultBranch = main
+
+
 [push]
 	default = current
 
