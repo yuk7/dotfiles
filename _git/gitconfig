@@ -11,6 +11,9 @@
 [push]
 	default = current
 
+[pull]
+	ff = only
+
 [sendemail]
 	smtpencryption = tls
 	smtpserver = smtp.gmail.com
@@ -44,3 +47,4 @@
 	gp = log --graph --date=short --format=\"%C(yellow)%h%C(reset) %C(magenta)%cd %C(auto)%d%C(reset) %s  %C(cyan)@%an%C(reset)\"
 	gpa = log --graph --date=short --format=\"%C(yellow)%h%C(reset) %C(magenta)%cd %C(auto)%d%C(reset) %s  %C(cyan)@%an%C(reset)\"
 	gpr = log --graph --date=short --format=\"%C(yellow)%h%C(reset) %C(auto)%d%C(reset) %s  %C(cyan)@%an %C(magenta)(%cr)%C(reset)\"
+
