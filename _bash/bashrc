@@ -100,7 +100,17 @@ function mkcd() {
 }
 alias mkcd=mkcd
 
-alias myip='wget http://ipinfo.io/ip -qO -'
+if type wget 2>/dev/null 1>/dev/null 
+then
+	alias myip='wget http://ipinfo.io/ip -qO -'
+fi
+
+if type curl 2>/dev/null 1>/dev/null 
+then
+	alias myip='curl http://ipinfo.io/ip'
+fi
+
+
 
 # Import from .bashrc.local
 if [ -e "${HOME}/.bashrc.local" ]
