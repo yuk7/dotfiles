@@ -1,20 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
-# Copyright (c) 2016 yuk7 <yukx00@gmail.com>
+# Copyright (c) 2016-2020 yuk7 <yukx00@gmail.com>
 # Released under the MIT license
 # http://opensource.org/licenses/mit-license.php
 
 
 DIR=$(cd $(dirname $0); pwd)
 cd $(dirname $0)
-
-find -maxdepth 0 &>/dev/null
-if [ $? != 0 ]
-then
-	echo find is not GNU find
-	echo unsupported. exit.
-	exit
-fi
 
 if [ $# -ge 2 ]
 then
@@ -25,7 +17,6 @@ then
 	done
 	exit
 fi
-
 
 if [ $# -eq 1 ]
 then
@@ -42,4 +33,9 @@ then
 	exit
 fi
 
-find -maxdepth 1 -type d -name "_*" | xargs -n1 $DIR/$(basename $0)
+files="$DIR/_*"
+for file in $files; do
+	if [ -d $file ] ; then
+    	$DIR/$(basename $0) $(basename $file)
+  	fi
+done
