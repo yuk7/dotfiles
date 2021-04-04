@@ -1,0 +1,5 @@
+*           text=auto
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+*.png       -text
+*.jpg       -text
