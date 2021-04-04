@@ -1,0 +1,52 @@
+#PROMPT
+PROMPT='%B%F{green}%n@%m%f%b:%B%F{blue}%~%f%b%# '
+
+# History
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt share_history
+setopt histignorealldups
+
+# Completion
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# Enable color support
+alias dir='dir --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+#aliases
+alias ll='ls -l'
+alias la='ls -A'
+alias lla='ls -la'
+alias l='ls -CF'
+alias md='mkdir'
+alias ps='ps --sort=start_time'
+alias c='clear'
+alias e='echo -e'
+alias x='exit'
+alias k='kill'
+
+# auto cd
+setopt auto_cd
+
+# if ls supports --show-control-chars,use it.
+if ls --show-control-chars 2>/dev/null 1>/dev/null 
+then
+	alias ls='ls --color=auto --show-control-chars'
+fi
+
+function mkcd() {
+  if [[ -d $1 ]]; then
+    echo "$1 already exists!"
+    cd $1
+  else
+    mkdir -p $1 && cd $1
+  fi
+}
