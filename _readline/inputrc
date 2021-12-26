@@ -2,6 +2,7 @@ set editing-mode vi
 
 "\e[A":history-search-backward
 "\e[B":history-search-forward
+"\e[3~": delete-char
 
 set completion-ignore-case on
 

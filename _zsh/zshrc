@@ -1,6 +1,9 @@
 #PROMPT
 PROMPT='%B%F{green}%n@%m%f%b:%B%F{blue}%~%f%b%# '
 
+#KEYMAP
+bindkey "^[[3~" delete-char
+
 # History
 HISTFILE=~/.histfile
 HISTSIZE=1000
