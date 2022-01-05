@@ -5,11 +5,18 @@ PROMPT='%B%F{green}%n@%m%f%b:%B%F{blue}%~%f%b%# '
 bindkey "^[[3~" delete-char
 
 # History
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTFILE=~/.zhistory
+HISTSIZE=2000
+SAVEHIST=2000
 setopt share_history
 setopt histignorealldups
+
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^[[B" history-beginning-search-forward-end
+
 
 # Completion
 autoload -Uz compinit
@@ -38,6 +45,13 @@ alias k='kill'
 
 # auto cd
 setopt auto_cd
+
+#cd aliases
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../z..'
+alias .......='cd ../../../../../..'
 
 # if ls supports --show-control-chars,use it.
 if ls --show-control-chars 2>/dev/null 1>/dev/null 
