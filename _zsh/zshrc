@@ -1,3 +1,8 @@
+if [ "$ZDOTDIR" = "" ]
+then
+  ZDOTDIR="~"
+fi
+
 #PROMPT
 PROMPT='%B%F{green}%n@%m%f%b:%B%F{blue}%~%f%b%# '
 
@@ -5,7 +10,7 @@ PROMPT='%B%F{green}%n@%m%f%b:%B%F{blue}%~%f%b%# '
 bindkey "^[[3~" delete-char
 
 # History
-HISTFILE=~/.zhistory
+HISTFILE=$ZDOTDIR/.zsh_history
 HISTSIZE=2000
 SAVEHIST=2000
 setopt share_history
