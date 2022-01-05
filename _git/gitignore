@@ -1,0 +1,9 @@
+# OS files
+Desktop.ini
+Thumbs.db
+.DS_Store
+
+# Vim
+*.swp
+*.~
+*.un~

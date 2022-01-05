@@ -2,11 +2,10 @@
 	name = yuk7
 	email = yukx00@gmail.com
 [core]
-	editor = nano
+	editor = vim
 	safecrlf = true
 	autoCRLF = input
 	quotepath = false
-	attributesfile = ~/.gitattributes
 
 [init]
 	defaultBranch = main
