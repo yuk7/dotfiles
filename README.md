@@ -9,7 +9,7 @@ curl -L yuk7.github.io/dotfiles | bash
 ```
 #### Windows
 ```cmd
-curl -L yuk7.github.io/dotfiles/install.bat -o install.bat & install.bat
+curl -L yuk7.github.io/dotfiles -o install.bat & install.bat
 ```
 #### Download from browser
 https://yuk7.github.io/dotfiles
