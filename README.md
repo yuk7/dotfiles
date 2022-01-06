@@ -2,18 +2,31 @@
 My dotfiles and installation scripts.  for GNU/Linux,MSYS2 and Windows.
 
 ## How-to-Use
-### GNU/Linux,MSYS2
-#### Install all
+### Quick install (online)
+#### GNU/Linux, MSYS2
+```bash
+curl -L yuk7.github.io/dotfiles | bash
+```
+#### Windows
+```cmd
+curl -L yuk7.github.io/dotfiles/install.bat -o install.bat & install.bat
+```
+#### Download from browser
+https://yuk7.github.io/dotfiles
+
+### Offline install
+#### GNU/Linux,MSYS2
+##### Install all
 ```
 $ ./install.sh
 ```
-#### Install Specified Targets
+##### Install Specified Targets
 ```
 $ ./install.sh {targets}
 ```
 
-### Windows
-#### Install All
+#### Windows
+##### Install All
 ```
 > install.bat
 ```
