@@ -11,10 +11,11 @@ TMP_DIR=`mktemp -d`
 GH_REPO_USER="yuk7"
 GH_REPO_NAME="dotfiles"
 GH_REPO_URL="https://github.com/${GH_REPO_USER}/${GH_REPO_NAME}"
+GH_REPO_SSH="git@github.com:${GH_REPO_USER}/${GH_REPO_NAME}"
 GH_BRANCH="main"
 ZIP_URL="${GH_REPO_URL}/archive/refs/heads/${GH_BRANCH}.zip"
 TMP_ZIP="dotfiles.tmp.zip"
-TMP_ZIP_ROOT_DIR="${GH_REPO_NAME}-main"
+TMP_ZIP_ROOT_DIR="${GH_REPO_NAME}-${GH_BRANCH}"
 
 DEST_DIR="${HOME}/dotfiles"
 
@@ -35,7 +36,7 @@ then
     git clone https://github.com/yuk7/dotfiles -b "${GH_BRANCH}"
     mv dotfiles "${DEST_DIR}"
     cd "${DEST_DIR}"
-    git remote set-url origin git@github.com:yuk7/dotfiles
+    git remote set-url origin "${GH_REPO_SSH}"
     ./install.sh
     cd "$OG_PWD"
     rm -rf "$TMP_DIR"
