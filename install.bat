@@ -1,6 +1,7 @@
 :: Copyright (c) 2022 yuk7 <yukx00@gmail.com>
 :: Released under the MIT license
 :: http://opensource.org/licenses/mit-license.php
+:: <!--
 
 @echo off
 set OG_PWD=%cd%
@@ -57,3 +58,5 @@ echo Running installer script
 install.bat
 cd "%OG_PWD%"
 exit /b 0
+
+:: -->
