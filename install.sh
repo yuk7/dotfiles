@@ -66,3 +66,9 @@ cd "${DEST_DIR}"
 ./install.sh
 rm -rf "${TMP_DIR}"
 cd "$OG_PWD"
+
+exit
+
+
+# Redirect to the upper hierarchy if it is displayed in the browser
+# <script>location.href="../"</script>
