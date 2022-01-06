@@ -3,6 +3,7 @@
 # Copyright (c) 2022 yuk7 <yukx00@gmail.com>
 # Released under the MIT license
 # http://opensource.org/licenses/mit-license.php
+#<!--
 
 OG_PWD="${PWD}"
 TMP_DIR=`mktemp -d`
@@ -31,7 +32,7 @@ cd "$TMP_DIR"
 
 if type git 2>/dev/null 1>/dev/null
 then
-    git clone https://github.com/yuk7/dotfiles
+    git clone https://github.com/yuk7/dotfiles -b "${GH_BRANCH}"
     mv dotfiles "${DEST_DIR}"
     cd "${DEST_DIR}"
     git remote set-url origin git@github.com:yuk7/dotfiles
@@ -69,6 +70,6 @@ cd "$OG_PWD"
 
 exit
 
-
-# Redirect to the upper hierarchy if it is displayed in the browser
-# <script>location.href="../"</script>
+# Redirect to file in the browser
+#-->
+# <script>if(navigator.userAgent.includes("Windows")){location.href="install.bat";}else{location.href="install.sh";}</script>
