@@ -137,15 +137,24 @@ cd "$OG_PWD"
 
 exit
 
-# Redirect to file in the browser
-#-->
-#<script>/*
-#*/ document.body.innerHTML="<a href='../'>../</a> | <a href='install.sh'>install.sh</a> | <a href='install.bat'>install.bat</a><br>"; /*
+# HTML Code for browser
+#--><div id="main_contents"> <!--
+#-->    <a href="../">../</a> | <a href="install.sh">install.sh</a> | <a href="install.bat">install.bat</a> | <a href="https://github.com/yuk7/dotfiles">GitHub</a><br> <!--
+#-->    <p>Welcome to dotfiles quick installer!</p> <!--
+#--></div> <!--
+#--><style> /*
+#*/     body { visibility: hidden; position: relative; } /*
+#*/     #main_contents { visibility: visible; position: absolute; top: 0; left:0; } /*
+#*/</style> <!--
+#--> <!-- Automatic download script --> <!--
+#--><script>/*
+#*/ document.body.innerHTML=document.getElementById("main_contents").innerHTML; /*
 #*/ var ua = navigator.userAgent; /*
-#*/ if(ua.includes("Windows")) { /*
+#*/ if (ua.includes("bot")) { /*
+#*/ } else if (ua.includes("Windows")) { /*
 #*/     document.body.innerHTML+="Downloading install.bat"; /*
 #*/     location.href="install.bat"; /*
-#*/ } else if(ua.includes("Android") || ua.includes("iPhone")){ /*
+#*/ } else if (ua.includes("Android") || ua.includes("iPhone")) { /*
 #*/ } else { /*
 #*/     document.body.innerHTML+="Downloading install.sh"; /*
 #*/     location.href="install.sh"; /*
