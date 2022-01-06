@@ -72,3 +72,18 @@ function mkcd() {
     mkdir -p $1 && cd $1
   fi
 }
+
+# Import from ZDOTDIR/zshrc.d/*.sh
+setopt nonomatch
+for i in "$ZDOTDIR"/zshrc.d/*.sh ; do
+    if [ -r "$i" ]; then
+        source "$i"
+    fi
+done
+setopt nomatch
+
+# ~/bin to PATH
+if [ -e "${HOME}/bin" ]
+then
+	export PATH=${HOME}/bin:$PATH
+fi

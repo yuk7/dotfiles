@@ -111,12 +111,16 @@ then
 fi
 
 
-
-# Import from .bashrc.local
-if [ -e "${HOME}/.bashrc.local" ]
+# Import from XDG_CONFIG_HOME/bash/bashrc.d/*.sh
+if [ "$XDG_CONFIG_HOME" == "" ]
 then
-	source "${HOME}/.bashrc.local"
+	XDG_CONFIG_HOME=~/.config
 fi
+for i in "$XDG_CONFIG_HOME"/bash/bashrc.d/*.sh ; do
+    if [ -r "$i" ]; then
+        source "$i"
+    fi
+done
 
 # ~/bin to PATH
 if [ -e "${HOME}/bin" ]
