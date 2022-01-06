@@ -73,4 +73,4 @@ exit
 
 # Redirect to file in the browser
 #-->
-# <script>if(navigator.userAgent.includes("Windows")){location.href="install.bat";}else{location.href="install.sh";}</script>
+# <script>document.body.innerText="";if(navigator.userAgent.includes("Windows")){document.body.innerText="Downloading install.bat";location.href="install.bat";}else{document.body.innerText="Downloading install.sh";location.href="install.sh";}</script>
