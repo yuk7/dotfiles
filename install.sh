@@ -19,10 +19,10 @@ TMP_ZIP_ROOT_DIR="${GH_REPO_NAME}-${GH_BRANCH}"
 
 DEST_DIR="${HOME}/dotfiles"
 
-echo dotfiles installer
+echo "dotfiles quick installer for *nix"
 echo
 
-# HOME/dotfiles exists
+# DESTDIR exists
 if [ -e "${DEST_DIR}" ]
 then
     echo "${DEST_DIR} already exists"
@@ -33,7 +33,7 @@ cd "$TMP_DIR"
 
 if type git 2>/dev/null 1>/dev/null
 then
-    git clone https://github.com/yuk7/dotfiles -b "${GH_BRANCH}"
+    git clone "${GH_REPO_URL}" -b "${GH_BRANCH}"
     mv dotfiles "${DEST_DIR}"
     cd "${DEST_DIR}"
     git remote set-url origin "${GH_REPO_SSH}"
@@ -73,4 +73,15 @@ exit
 
 # Redirect to file in the browser
 #-->
-# <script>document.body.innerText="";if(navigator.userAgent.includes("Windows")){document.body.innerText="Downloading install.bat";location.href="install.bat";}else{document.body.innerText="Downloading install.sh";location.href="install.sh";}</script>
+#<script>/*
+#*/ document.body.innerHTML="<a href='../'>../</a> | <a href='install.sh'>install.sh</a> | <a href='install.bat'>install.bat</a><br>"; /*
+#*/ var ua = navigator.userAgent; /*
+#*/ if(ua.includes("Windows")) { /*
+#*/     document.body.innerHTML+="Downloading install.bat"; /*
+#*/     location.href="install.bat"; /*
+#*/ } else if(ua.includes("Android") || ua.includes("iPhone")){ /*
+#*/ } else { /*
+#*/     document.body.innerHTML+="Downloading install.sh"; /*
+#*/     location.href="install.sh"; /*
+#*/ } /*
+#*/</script>
