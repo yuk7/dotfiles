@@ -7,6 +7,7 @@ del /F /Q %USERPROFILE%\.bashrc.bak >NUL 2>&1
 move /Y %USERPROFILE%\.bashrc %USERPROFILE%\.bashrc.bak >NUL 2>&1
 
 mklink /h %USERPROFILE%\.bashrc %~dp0\bashrc
+attrib +h %USERPROFILE%\.bashrc
 
 if not exist %USERPROFILE%\.bashrc (
 echo ERROR:Installation failed.

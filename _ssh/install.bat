@@ -7,6 +7,7 @@ del /F /Q %USERPROFILE%\.ssh\config.bak >NUL 2>&1
 move /Y %USERPROFILE%\.ssh\config %USERPROFILE%\.ssh\config.bak >NUL 2>&1
 
 mkdir %USERPROFILE%\.ssh >NUL 2>&1
+attrib +h %USERPROFILE%\.ssh
 mklink /h %USERPROFILE%\.ssh\config %~dp0\config
 
 if not exist %USERPROFILE%\.ssh\config (

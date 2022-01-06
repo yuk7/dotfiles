@@ -31,5 +31,8 @@ if not "%~1"=="" (
 exit/b
 )
 
+mkdir %USERPROFILE%\.config >NUL 2>&1
+attrib +h %USERPROFILE%\.config
+
 for /f "delims=" %%i in ('dir /A:D /b ^| find "_"') do cmd /c %~dpnx0 %%i
 exit/b

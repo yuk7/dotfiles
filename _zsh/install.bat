@@ -3,12 +3,13 @@
 :: http://opensource.org/licenses/mit-license.php
 
 @echo off
-set ZDOTDIR=%ZDOTDIR%\.config\zsh
+set ZDOTDIR=%USERPROFILE%\.config\zsh
 mkdir %ZDOTDIR% >NUL 2>&1
 
 del /F /Q %USERPROFILE%\.zshenv.bak >NUL 2>&1
 move /Y %USERPROFILE%\.zshenv %USERPROFILE%\.zshenv.bak >NUL 2>&1
 mklink /h %USERPROFILE%\.zshenv %~dp0\zshenv
+attrib +h %USERPROFILE%\.zshenv
 
 del /F /Q %ZDOTDIR%\.zshrc.bak >NUL 2>&1
 move /Y %ZDOTDIR%\.zshrc %ZDOTDIR%\.zshrc.bak >NUL 2>&1

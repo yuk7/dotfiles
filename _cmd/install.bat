@@ -7,6 +7,7 @@ del /F /Q %USERPROFILE%\cmdrc.bak >NUL 2>&1
 move /Y %USERPROFILE%\cmdrc.bat %USERPROFILE%\cmdrc.bak >NUL 2>&1
 
 mklink /h %USERPROFILE%\cmdrc.bat %~dp0\cmdrc.bat
+attrib +h %USERPROFILE%\cmdrc.bat
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Command Processor" /v AutoRun /d %USERPROFILE%\cmdrc.bat /f
 
 if not exist %USERPROFILE%\cmdrc.bat (

@@ -7,6 +7,7 @@ del /F /Q %USERPROFILE%\.inputrc.bak >NUL 2>&1
 move /Y %USERPROFILE%\.inputrc %USERPROFILE%\.inputrc.bak >NUL 2>&1
 
 mklink /h %USERPROFILE%\.inputrc %~dp0\inputrc
+attrib +h %USERPROFILE%\.inputrc
 
 if not exist %USERPROFILE%\.inputrc (
 echo ERROR:Installation failed.
