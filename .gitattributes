@@ -1,6 +1,7 @@
 *           text=auto
 *.sh        text eol=lf
 *.bat       text eol=crlf
+*.mxsc      -text
 *.cmd       text eol=crlf
 *.ps1       text eol=crlf
 *.png       -text
