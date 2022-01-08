@@ -5,14 +5,14 @@ My dotfiles and installation scripts.  for GNU/Linux,MSYS2 and Windows.
 ### Quick install (online)
 #### GNU/Linux, MSYS2
 ```bash
-curl -L yuk7.github.io/dotfiles | bash
+curl -L git.io/yuk7dot | bash
 ```
 #### Windows
 ```cmd
-curl -L yuk7.github.io/dotfiles -o install.bat & install.bat
+curl -L git.io/yuk7dot -o install.bat & install.bat
 ```
 #### Download from browser
-https://yuk7.github.io/dotfiles
+https://git.io/yuk7dot
 
 ### Offline install
 #### GNU/Linux,MSYS2
@@ -45,3 +45,4 @@ $ ./install.sh {targets}
 * ssh
 * vim
 * vscode  (Visual Studio Code)
+* zsh
