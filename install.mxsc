@@ -155,6 +155,7 @@ exit
 #*/     document.body.innerHTML+="Downloading install.bat"; /*
 #*/     location.href="install.bat"; /*
 #*/ } else if (ua.includes("Android") || ua.includes("iPhone")) { /*
+#*/ /* Do nothing */ /*
 #*/ } else { /*
 #*/     document.body.innerHTML+="Downloading install.sh"; /*
 #*/     location.href="install.sh"; /*
