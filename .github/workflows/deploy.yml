@@ -1,0 +1,36 @@
+name: Quick Installer Deploy CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup environments
+      run: echo "REPOSITORY_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')" >> $GITHUB_ENV
+    - name: Setup Git
+      run: |
+        git config --global user.name "bot"
+        git config --global user.email "${{secrets.ACTIONS_EMAIL}}"
+    - name: Build
+      run: |
+        cd quick-installer
+        git clone https://github.com/yuk7/shell_batch_combiner --depth 1
+        ./shell_batch_combiner/combiner.sh ./install.bat ./install.sh ./install.mxsc
+        cd ..
+    - name: Deploy
+      run: |
+        cd quick-installer
+        git clone https://${{github.actor}}:${{github.token}}@github.com/${{github.repository}} -b gh-pages
+        mv ${{env.REPOSITORY_NAME}} gh-pages
+        cp install.bat install.sh install.mxsc gh-pages/
+        cd ./gh-pages
+        git add .
+        bash -c "git commit -m \"built from ${{github.sha}}\" || true"
+        git push --force-with-lease origin gh-pages
+        sh -n
