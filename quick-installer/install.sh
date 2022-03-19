@@ -72,6 +72,7 @@ cd "$OG_PWD"
 exit
 
 # HTML Code for browser
+#--><title>dotfiles quick installer</title> <!--
 #--><div id="main_contents"> <!--
 #-->    <a href="../">../</a> | <a href="install.sh">install.sh</a> | <a href="install.bat">install.bat</a> | <a href="https://github.com/yuk7/dotfiles">GitHub</a><br> <!--
 #-->    <p>Welcome to dotfiles quick installer!</p> <!--
