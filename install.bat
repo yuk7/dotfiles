@@ -4,20 +4,23 @@
 :: <!--
 
 @echo off
-set OG_PWD=%cd%
-set TEMP_DIR=%TEMP%\dot.%RANDOM%
-mkdir %TEMP_DIR% >NUL 2>&1
 
+:: Configurations
 set GH_REPO_USER=yuk7
 set GH_REPO_NAME=dotfiles
+set GH_BRANCH=main
+set DEST_DIR=%USERPROFILE%\dotfiles
+
 set GH_REPO_URL=https://github.com/%GH_REPO_USER%/%GH_REPO_NAME%
 set GH_REPO_SSH=git@github.com:%GH_REPO_USER%/%GH_REPO_NAME%
-set GH_BRANCH=main
 set ZIP_URL=%GH_REPO_URL%/archive/refs/heads/%GH_BRANCH%.zip
 set TMP_ZIP=dotfiles.tmp.zip
 set TMP_ZIP_ROOT_DIR=%GH_REPO_NAME%-%GH_BRANCH%
 
-set DEST_DIR=%USERPROFILE%\dotfiles
+set OG_PWD=%cd%
+set TEMP_DIR=%TEMP%\dot.%RANDOM%
+mkdir %TEMP_DIR% >NUL 2>&1
+
 
 echo dotfiles quick installer for Windows
 echo.
@@ -29,7 +32,7 @@ if exist "%DEST_DIR%" (
 
 
 cd %TEMP_DIR%
-
+:: If git is installed, use git clone.
 WHERE /Q git
 IF %ERRORLEVEL% == 0 (
     echo Downloading with Git mode
@@ -44,6 +47,7 @@ IF %ERRORLEVEL% == 0 (
     exit /b 0
 )
 
+:: If git is not installed, use zip method.
 echo Downloading with zip mode
 set DQ="
 powershell -Command "Invoke-WebRequest %DQ%%ZIP_URL%%DQ% -OutFile %DQ%%TEMP_DIR%\%TMP_ZIP%%DQ%  -UseBasicParsing"
