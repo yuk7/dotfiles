@@ -22,6 +22,30 @@
 	// Do not edit this value.
 	"crash-reporter-id": "00000000-0000-0000-0000-000000000000",
 
-	"enable-proposed-api":["github.copilot", "GitHub.vscode-pull-request-github",
-		"ms-vsliveshare.vsliveshare", "ms-vscode-remote.remote-containers"]
+	"enable-proposed-api":["GitHub.codespaces", "GitHub.copilot-nightly",
+		"GitHub.copilot", "GitHub.vscode-pull-request-github-insiders",
+		"GitHub.vscode-pull-request-github", "GitHub.remotehub",
+		"GitHub.remotehub-insiders", "Microsoft.vscode-nmake-tools",
+		"ms-dotnettools.dotnet-interactive-vscode",
+		"ms-python.gather", "ms-python.python",
+		"ms-toolsai.jupyter", "ms-toolsai.vscode-ai",
+		"ms-toolsai.vscode-ai-remote", "ms-vscode-remote.remote-containers-nightly",
+		"ms-vscode-remote.remote-containers", "ms-vscode-remote.remote-ssh-edit-nightly",
+		"ms-vscode-remote.remote-ssh-edit", "ms-vscode-remote.remote-ssh-nightly",
+		"ms-vscode-remote.remote-ssh", "ms-vscode-remote.remote-ssh-serverless",
+		"ms-vscode-remote.remote-wsl", "ms-vscode-remote.remote-wsl-recommender",
+		"ms-vscode-remote.vscode-remote-extensionpack-nightly",
+		"ms-vscode-remote.vscode-remote-extensionpack",
+		"ms-vscode.azure-account", "ms-vscode.azure-sphere-tools-ui",
+		"ms-vscode.azure-sphere-tools", "ms-vscode.js-debug-nightly",
+		"ms-vscode.js-debug", "ms-vscode.lsif-browser",
+		"ms-vscode.vscode-selfhost-test-provider",
+		"ms-vsliveshare.cloudenv-explorer", "ms-vsliveshare.cloudenv",
+		"ms-vsliveshare.vsliveshare", "ms-vsonline.vsonline",
+		"dbaeumer.vscode-eslint", "tanhakabir.rest-book",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"VisualStudioExptTeam.vscodeintellicode-insiders",
+		"VisualStudioExptTeam.vscodeintellicode-completions",
+		"vscode.vscode-web-playground",
+		"ms-azuretools.vscode-azureappservice"]
 }
