@@ -33,8 +33,7 @@ cd %TEMP_DIR%
 WHERE /Q git
 IF %ERRORLEVEL% == 0 (
     echo Downloading with Git mode
-    git clone "%GH_REPO_URL%" -b "%GH_BRANCH%"
-    move "%GH_REPO_NAME%" "%DEST_DIR%"
+    git clone "%GH_REPO_URL%" -b "%GH_BRANCH%" "%DEST_DIR%"
     cd "%DEST_DIR%"
     rmdir "%TEMP_DIR%"
     git remote set-url origin "%GH_REPO_SSH%"
