@@ -1,9 +1,9 @@
 # dotfiles
-My dotfiles and installation scripts.  for GNU/Linux,MSYS2 and Windows.
+My dotfiles and installation scripts.  for GNU/Linux,MSYS2,macOS and Windows.
 
 ## How-to-Use
 ### Quick install (online)
-#### GNU/Linux, MSYS2
+#### GNU/Linux, MSYS2, macOS
 ```bash
 curl -L git.io/yuk7dot | bash
 ```
@@ -15,7 +15,7 @@ curl -L git.io/yuk7dot -o install.bat & install.bat
 https://git.io/yuk7dot
 
 ### Offline install
-#### GNU/Linux,MSYS2
+#### GNU/Linux, MSYS2, macOS
 ##### Install all
 ```
 $ ./install.sh
@@ -46,3 +46,6 @@ $ ./install.sh {targets}
 * vim
 * vscode  (Visual Studio Code)
 * zsh
+
+## License
+[MIT License](LICENSE)
