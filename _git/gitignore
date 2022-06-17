@@ -1,9 +1,36 @@
-# OS files
-desktop.ini
-Desktop.ini
-thumbs.db
-Thumbs.db
+# Windows
+[Dd]esktop.ini
+[Tt]humbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+$RECYCLE.BIN
+*.stackdump
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+*.icloud
+
+# Linux
+lost+found
+.directory
+.fuse_hidden*
+.Trash-*
+.nfs*
 
 # Vim
 *.swp
