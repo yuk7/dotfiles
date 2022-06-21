@@ -44,6 +44,7 @@
 	st = status
 	sh = show
 	rso = remote set-url origin
+	rgo = remote get-url origin
 	rv = remote -v
 	wc = whatchanged
 	graph = log --graph --date=short --format=\"%C(yellow)%h%C(reset)  %C(magenta)%cd %C(auto)%d%C(reset) %s %C(cyan)@%an%C(reset)\"
