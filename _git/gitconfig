@@ -52,3 +52,8 @@
 	gpa = log --graph --date=short --format=\"%C(yellow)%h%C(reset) %C(magenta)%cd %C(auto)%d%C(reset) %s  %C(cyan)@%an%C(reset)\"
 	gpr = log --graph --date=short --format=\"%C(yellow)%h%C(reset) %C(auto)%d%C(reset) %s  %C(cyan)@%an %C(magenta)(%cr)%C(reset)\"
 
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
