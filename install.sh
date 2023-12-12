@@ -82,7 +82,7 @@ exit
 # HTML Code for browser
 #--><title>dotfiles quick installer</title> <!--
 #--><div id="main_contents"> <!--
-#-->    <a href="../">../</a> | <a href="install.sh">install.sh</a> | <a href="install.bat">install.bat</a> | <a href="https://github.com/yuk7/dotfiles">GitHub</a><br> <!--
+#-->    <a href="../">../</a> | <a href="install.sh" download>install.sh</a> | <a href="install.bat" download>install.bat</a> | <a href="https://github.com/yuk7/dotfiles">GitHub</a><br> <!--
 #-->    <p>Welcome to dotfiles quick installer!</p> <!--
 #--></div> <!--
 #--><style> /*
@@ -96,11 +96,17 @@ exit
 #*/ if (ua.includes("bot")) { /*
 #*/ } else if (ua.includes("Windows")) { /*
 #*/     document.body.innerHTML+="Downloading install.bat"; /*
-#*/     location.href="install.bat"; /*
+#*/     const element = document.createElement('a'); /*
+#*/     element.href = "install.bat"; /*
+#*/     element.download = "install.bat"; /*
+#*/     element.click(); /*
 #*/ } else if (ua.includes("Android") || ua.includes("iPhone")) { /*
 #*/ /* Do nothing */ /*
 #*/ } else { /*
 #*/     document.body.innerHTML+="Downloading install.sh"; /*
-#*/     location.href="install.sh"; /*
+#*/     const element = document.createElement('a');/*
+#*/     element.href = "install.sh"; /*
+#*/     element.download = "install.sh"; /*
+#*/     element.click(); /*
 #*/ } /*
 #*/</script>
