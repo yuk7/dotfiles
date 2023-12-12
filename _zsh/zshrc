@@ -69,6 +69,17 @@ then
 	alias ls='ls --color=auto --show-control-chars'
 fi
 
+# myip command
+if type wget 2>/dev/null 1>/dev/null
+then
+	alias myip='wget http://ipinfo.io/ip -qO -'
+fi
+
+if type curl 2>/dev/null 1>/dev/null
+then
+	alias myip='curl http://ipinfo.io/ip'
+fi
+
 function mkcd() {
   if [[ -d $1 ]]; then
     echo "$1 already exists!"
