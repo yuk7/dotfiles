@@ -64,6 +64,7 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
 # if ls supports --show-control-chars,use it.
 if ls --show-control-chars 2>/dev/null 1>/dev/null 
 then
@@ -88,11 +89,16 @@ alias la='ls -A'
 alias lla='ls -la'
 alias l='ls -CF'
 alias md='mkdir'
-alias ps='ps --sort=start_time'
 alias c='clear'
 alias e='echo -e'
 alias x='exit'
 alias k='kill'
+
+# if ps supports --sort, use it.
+if ps --sort=start_time 2>/dev/null 1>/dev/null
+then
+	alias ps='ps --sort=start_time'
+fi
 
 function mkcd() {
 	mkdir $1;

@@ -42,7 +42,6 @@ alias la='ls -A'
 alias lla='ls -la'
 alias l='ls -CF'
 alias md='mkdir'
-alias ps='ps --sort=start_time'
 alias c='clear'
 alias e='echo -e'
 alias x='exit'
@@ -58,7 +57,13 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../z..'
 alias .......='cd ../../../../../..'
 
-# if ls supports --show-control-chars,use it.
+# if ps supports --sort, use it.
+if ps --sort=start_time 2>/dev/null 1>/dev/null
+then
+  alias ps='ps --sort=start_time'
+fi
+
+# if ls supports --show-control-chars, use it.
 if ls --show-control-chars 2>/dev/null 1>/dev/null 
 then
 	alias ls='ls --color=auto --show-control-chars'
