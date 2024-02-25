@@ -23,7 +23,7 @@
 	"crash-reporter-id": "00000000-0000-0000-0000-000000000000",
 
 	"enable-proposed-api":["GitHub.codespaces", "GitHub.copilot-nightly",
-		"GitHub.copilot", "GitHub.vscode-pull-request-github-insiders",
+		"GitHub.copilot", "GitHub.copilot-chat","GitHub.vscode-pull-request-github-insiders",
 		"GitHub.vscode-pull-request-github", "GitHub.remotehub",
 		"GitHub.remotehub-insiders", "Microsoft.vscode-nmake-tools",
 		"ms-dotnettools.dotnet-interactive-vscode",
