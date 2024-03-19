@@ -65,10 +65,51 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# if ls supports --show-control-chars,use it.
-if ls --show-control-chars 2>/dev/null 1>/dev/null 
-then
+# use gnu ls if available.
+# if ls supports --show-control-chars, use it.
+if type gls 2>/dev/null 1>/dev/null; then
+  if gls --show-control-chars 2>/dev/null 1>/dev/null; then
+    alias ls='gls --color=auto --show-control-chars'
+  else
+    alias ls='gls'
+  fi
+elif ls --show-control-chars 2>/dev/null 1>/dev/null; then
 	alias ls='ls --color=auto --show-control-chars'
+fi
+
+# use gnu grep if available.
+if type ggrep 2>/dev/null 1>/dev/null; then
+  alias grep='ggrep'
+fi
+
+# use gnu find if available.
+if type gfind 2>/dev/null 1>/dev/null; then
+  alias find='gfind'
+fi
+
+# use gnu sed if available.
+if type gsed 2>/dev/null 1>/dev/null; then
+  alias sed='gsed'
+fi
+
+# use gnu awk if available.
+if type gawk 2>/dev/null 1>/dev/null; then
+  alias awk='gawk'
+fi
+
+# use gnu date if available.
+if type gdate 2>/dev/null 1>/dev/null; then
+  alias date='gdate'
+fi
+
+# use gnu readlink if avaliable.
+if type greadlink 2>/dev/null 1>/dev/null; then
+  alias readlink='greadlink'
+fi
+
+# use gnu xargs if available.
+if type gxargs 2>/dev/null 1>/dev/null; then
+  alias xargs='gxargs'
 fi
 
 # Navigation
