@@ -63,7 +63,7 @@ setopt auto_cd
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-alias ......='cd ../../../../z..'
+alias ......='cd ../../../../..'
 alias .......='cd ../../../../../..'
 
 # if ps supports --sort, use it.
