@@ -39,6 +39,7 @@
 	br = branch
 	cl = clone
 	co = checkout
+	sw = switch
 	ft = fetch
 	df = diff
 	st = status
