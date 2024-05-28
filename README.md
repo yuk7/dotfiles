@@ -1,4 +1,6 @@
 # dotfiles
+![dotfiles](https://github.com/yuk7/dotfiles/assets/29954265/7dca9b76-24c6-4959-bf7b-52ccddf0e01f)
+
 My dotfiles and installation scripts.  for GNU/Linux,MSYS2,macOS and Windows.
 
 ## How-to-Use
