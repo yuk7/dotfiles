@@ -1,4 +1,4 @@
-:: Copyright (c) 2022 yuk7 <yukx00@gmail.com>
+:: Copyright (c) 2022-2024 yuk7 <yukx00@gmail.com>
 :: Released under the MIT license
 :: http://opensource.org/licenses/mit-license.php
 :: <!--
