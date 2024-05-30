@@ -1,0 +1,3 @@
+[submodule "quick-installer"]
+	path = quick-installer
+	url = git@github.com:yuk7/dotfiles-quickinstaller
