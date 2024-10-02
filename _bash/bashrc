@@ -97,6 +97,11 @@ if type gawk 2>/dev/null 1>/dev/null; then
   alias awk='gawk'
 fi
 
+# use gnu tar if available.
+if type gtar 2>/dev/null 1>/dev/null; then
+  alias tar='gtar'
+fi
+
 # use gnu date if available.
 if type gdate 2>/dev/null 1>/dev/null; then
   alias date='gdate'
