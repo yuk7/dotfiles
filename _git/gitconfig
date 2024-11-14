@@ -6,6 +6,8 @@
 	safecrlf = true
 	autoCRLF = input
 	quotepath = false
+	ignorecare = false
+	precomposeunicode = true
 
 [init]
 	defaultBranch = main
