@@ -1,6 +1,7 @@
 [user]
 	name = yuk7
 	email = yukx00@gmail.com
+
 [core]
 	editor = vim
 	safecrlf = true
@@ -12,12 +13,20 @@
 [init]
 	defaultBranch = main
 
-
 [push]
 	default = current
 
 [pull]
 	ff = only
+
+[branch]
+    sort = -committerdate
+
+[diff]
+	algorithm = histogram
+
+[rebase]
+	autosquash = true
 
 [sendemail]
 	smtpencryption = tls
@@ -60,5 +69,6 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+
 [credential "https://dev.azure.com"]
 	useHttpPath = true
